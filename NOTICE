@@ -1,0 +1,16 @@
+fusion-harness
+Copyright 2026 fusion-harness contributors
+
+This product includes software adapted from Harness² (https://github.com/google-research/harness2),
+Copyright 2026 Google LLC, licensed under the Apache License, Version 2.0:
+  - fusion_harness/tree.py is adapted from harness2/core/tree.py (changes noted in its header).
+  - The improver, composition and reflection prompts in fusion_harness/prompts.py
+    are adapted from harness2/core/prompts.py.
+
+This product includes design and prompt text adapted from dsh-superagent
+(https://github.com/deepseek-ai/dsh-superagent-prototype), Copyright (c) 2026 DeepSeek Harness
+Team, licensed under the MIT License (see THIRD_PARTY_NOTICES.md):
+  - the escalation, communication and honest-status rules in fusion_harness/prompts.py,
+    fusion_harness/signals.py and fusion_harness/base_harness/;
+  - the durable outbox, the "speak only when a person must act" policy and the
+    allowed-actor gate.

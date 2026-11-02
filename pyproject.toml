@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fusion-harness"
+version = "0.1.0"
+description = "A self-improving agent harness: loops tasks to completion, learns from sparse human feedback, and escalates only when it is genuinely blocked."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = ["anthropic>=0.70"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+fh = "fusion_harness.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["fusion_harness*"]
+
+[tool.setuptools.package-data]
+fusion_harness = ["base_harness/**/*", "base_harness/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
